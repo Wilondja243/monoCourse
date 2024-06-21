@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Scrolling Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      
+      body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+}
+
+.carousel-item {
+    min-width: 200px; /* Adjust based on your preference */
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #007BFF;
+    color: white;
+    margin-right: 10px; /* Space between items */
+}
+
+
+
+
+    </style>
+</head>
+<div class="carousel">
+    <div class="carousel-track">
+        <div class="carousel-item">1</div>
+        <div class="carousel-item">2</div>
+        <div class="carousel-item">3</div>
+        <div class="carousel-item">4</div>
+        <div class="carousel-item">5</div>
+    </div>
+</div>
+
+    <script>
+    const carouselTrack = document.querySelector('.carousel-track');
+const carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
+
+let currentIndex = 0;
+
+function cloneItems() {
+    carouselItems.forEach(item => {
+        const clone = item.cloneNode(true);
+        carouselTrack.appendChild(clone);
+    });
+}
+
+function scrollCarousel() {
+    const firstItem = carouselItems[0];
+    const itemWidth = firstItem.offsetWidth + parseInt(getComputedStyle(firstItem).marginRight);
+    carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    currentIndex++;
+    if (currentIndex >= carouselItems.length) {
+        carouselTrack.style.transition = 'none';
+        carouselTrack.style.transform = 'translateX(0)';
+        currentIndex = 0;
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                carouselTrack.style.transition = 'transform 0.5s linear';
+            });
+        });
+    }
+}
+
+function startCarousel() {
+    cloneItems();
+    setInterval(scrollCarousel, 2000); // Change slide every 2 seconds
+}
+
+document.addEventListener('DOMContentLoaded', startCarousel);
+
+
+    </script>
+</body>
+</html>
