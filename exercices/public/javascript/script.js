@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
     const logo = document.querySelector('.logo');
     if (logo) {
         logo.classList.add('showlogo1');
@@ -49,6 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         bars_H.classList.add('navigations');
     }
 
-});
+});*/
 
 
