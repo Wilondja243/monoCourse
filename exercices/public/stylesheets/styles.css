@@ -668,9 +668,11 @@ nav .nav-lists{
     display: flex;
     column-gap: 0.5em;
 }
-.meet-our .other-instructors a,
-.feed-back .other-feed a{
+.meet-our .other-instructors button,
+.feed-back .other-feed button{
     padding: 4px 5px;
+    border: none;
+    cursor: pointer;
     background: #d604e9;
     color: var(--white-color--);
     border-radius: 50%;
@@ -686,7 +688,10 @@ nav .nav-lists{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     column-gap: 1em;
+    position: relative;
 }
+
+
 .all-instructors{
     
 }
@@ -838,10 +843,11 @@ footer{
     border-radius: 20px;
     box-shadow: 0 30px 30px #03ffff15;
     background: var(--white-color--);
+    display: flex;
 }
 .news-letter .input-search input{
     padding: 10px 8px;
-    width: 29.2em;
+    width: 29.5em;
     border-radius: 20px;
     border: none;
 }
@@ -857,6 +863,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     column-gap: 5em;
+    row-gap: 2em;
     justify-content: space-between;
     padding: 2em 0;
 }
@@ -867,8 +874,9 @@ footer{
     -webkit-text-fill-color: transparent;
 }
 .mono-course p{
-    color: #ebeaea;
-    padding: 25px 0;
+    color: #b6b6b6;
+    padding: 20px 0;
+    font-size: 15px;
 }
 .mono-course .our-address{
     display: flex;
@@ -876,7 +884,7 @@ footer{
     padding: 10px 0;
 }
 .mono-course .our-address i{
-    padding: 10px 10px;
+    padding: 8px 8px;
     border-radius: 50%;
     background: #e2e2e2;
 }
@@ -897,10 +905,11 @@ footer{
     padding: 10px 0;
 }
 .f-bar .ft-t .f-t{
-    padding: 10px 0;
+    padding: 7px 0;
 }
 .f-bar .ft-t .f-t a{
-    color: #cac9c9;
+    color: #b8b8b8;
+    font-size: 15px;
 }
 
 
@@ -925,8 +934,7 @@ footer{
         width: 36vw;height: 40vw;
     }
     .thumb-desc h1{
-        font-size: 7vw;
-        transition: 0.2s ease-in-out;
+        font-size: 7vw;transition: 0.2s ease-in-out;
     }
 }
 
@@ -994,12 +1002,10 @@ footer{
         grid-template-columns: repeat(2, 1fr);
     }
     .most-courses{
-        display: flex;
-        column-gap: 1em;
+        display: flex;column-gap: 1em;
     }
     .most-courses .images-course img{
-        width: 10vw;
-        height: 130px;
+        width: 10vw;height: 130px;
     }
     .mosted-course{
         width: 100%;
@@ -1033,28 +1039,21 @@ footer{
     }
     
     .search-content{   
-        margin: 0 0.5em;
-        padding: 20px 0;
-        border-radius: 10px;
+        margin: 0 0.5em;padding: 20px 0;border-radius: 10px;
         box-shadow: 0 0 20px #03030813;
         background: var(--white-color--);
      }
     .search-content .search{
-        justify-content: center;
-        align-items: center;
+        justify-content: center; align-items: center;
      }
      .search-content .search .select-input{
-         width: 65vw;
-         margin: 1em 0;
+         width: 65vw;margin: 1em 0;
      }
      .search-content .search .select-input input[type="search"]{
-         padding: 10px 8px;
-         width: 50vw;
+         padding: 10px 8px;width: 50vw;
      }
      .search-content .search input[type="submit"]{
-        padding: 5px 0;
-        width: 5em;
-        height: 2.3em;
+        padding: 5px 0;width: 5em;height: 2.3em;
     }
     .start-btn{
         display:block;
@@ -1072,6 +1071,24 @@ footer{
     }
     .saw-about-class{
         bottom: -1em;left: 1em;
+    }
+
+    .meet-all-instructors{
+        display: flex;
+        overflow-x: auto;
+    }
+    .all-instructors{
+        flex: 0 0 auto;
+    }
+    .all-instructors .imgs{
+        height: 290px;
+    }
+    .all-instructors .imgs img{
+        top: 0em;
+    }
+
+    .footer-content{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
@@ -1113,4 +1130,38 @@ footer{
     .most-courses .images-course img{
         width: 28vw;height: 130px;
     }
+
+    
+    .all-feed-back{
+        display: flex;overflow-x: auto;scroll-snap-type: x mandatory;-webkit-overflow-scrolling: touch;
+    }
+    .studens-testimoni{
+        flex: 0 0 auto;width: 100%;scroll-snap-align: start;
+    }
+
+    
+    .news-letter .input-search{
+        width: 80%;background: var(--white-color--);
+    }
+    .news-letter .input-search input{
+        padding: 10px 8px;width: 90%;border: none;
+    }
+    .news-letter .input-search .news-btn{
+        padding: 13px 15px;color: var(--white-color--);background: var(--rose-color--);
+    }
+    @media (max-width:400px){
+        .all-instructors .imgs{height: 230px;width: 90%;}
+        .all-instructors .imgs img{ width: 100%;height: 230px; }
+
+        .footer-content{grid-template-columns: repeat(1,1fr);text-align: center;} 
+        .mono-course .our-address{justify-content: center;}
+        .mono-course{border-bottom: solid 1px #d3d2d233;}
+        .all-companies{border-bottom: solid 1px #d3d2d233;}
+        .our-contact{border-bottom: solid 1px #d3d2d233;}
+    }
+    
+}
+@media screen and (max-width:350px){
+    
+    
 }
