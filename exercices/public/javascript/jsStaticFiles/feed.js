@@ -1,12 +1,3 @@
-// function slideFeed(){
-   
-//     fetch('./instructor.json').then(resp => resp.json()).then(feedDB =>{
-//         console.log(JSON.parse(feedDB));
-//     })
-//     .catch(error => console.log('erreur de chargement'+error));
-    
-// }
-// slideFeed()
 
 
     // if(window.matchMedia("(ax-width:600px)").matches){
@@ -30,6 +21,66 @@
 
     //     setInterval(nextFeed,3000);
     // }
+
+const dataFeed =[
+    {
+        "id":1,
+        "name":"fiston kin",
+        "country":"Nigeria, Lagos",
+        "description": "MonoCourse est un site vraiment tres simpas, je te le consille mille fois pour apprendre et devenir le plus meilleur.",
+        "img":"../public/images/young-black-female-student-with-books-removebg-preview.png",
+    },
+    {
+        "id":2,
+        "name":"luckson premier",
+        "country":"cote d'ivoire, abidjan",
+        "description": "Suis de la rdc, j'ai connu monoCourse y a 2 ans j'ai commence a apprendre les bases du javascript et maintenant suis devenus pro juste avec monoCourse.",
+        "img":"../public/images/young-black-female-student-with-books-removebg-preview.png",
+    },
+    {
+        "id":3,
+        "name":"michel nakindu",
+        "country":"Burundi,bujumbura",
+        "description": "J'avais vraiment beacoup de difficultes en programmation, apres plusieur recherche sur le web cherchant le sit qui apprend en ligne suis tombe sur monalina qui me fait un de plus grand dev a present.",
+        "img":"../public/images/t.PNG"   
+    }
+    ]
+      
+      
+function dataFEED_SET(){
+
+    const feed_backs = document.querySelector('.all-feed-back');
+
+    dataFeed.forEach(data_feed => {
+        
+        const feed_html =
+        `
+        <div class="studens-testimoni">
+            <div class="testimoni">
+                <div class="imgs">
+                    <img src="${data_feed.img}" alt="">
+                </div>
+                <div class="test-desc">
+                    <div class="name-student">${data_feed.name}</div>
+                    <small>${data_feed.country}</small>
+                    <div class="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="avis-test">${data_feed.description}</div>
+        </div>`;
+
+        feed_backs.innerHTML +=feed_html;
+        
+        })  
+}
+dataFEED_SET();
+
 
 
 const scrollInstructors = document.querySelector('.meet-all-instructors');
