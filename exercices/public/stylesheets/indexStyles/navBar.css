@@ -1,0 +1,139 @@
+
+
+/* nav responsive bar */
+
+
+.main-responsive-bar-container{
+    width: 100%;
+    height: 100vh;
+    background: #01000e1a;
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    display: none;   
+}
+.main-responsive-bar-container.display-main-responsive-bar-container{
+    
+}
+
+.main-resposive-bar{
+    display: block;
+    box-shadow:0 0 40px #00000733;
+    background: var(--white-color--);
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+} 
+
+.main-resposive-bar .users-profil-bar{
+    background: #bd0094;
+    height: 7.5em;
+    padding: 20px 4vw;
+}
+.main-resposive-bar .users-profil-bar .user-profil{
+    display: block;
+    color: var(--white-color--);
+}
+.users-profil-bar .user-profil{
+    color: var(--white-color--);
+}
+.users-profil-bar .user-profil .images{
+    display: flex;
+    justify-content: space-between;
+}
+.users-profil-bar .user-profil .images img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.users-profil-bar .user-profil .images .theme{ 
+    cursor: pointer;
+    
+} 
+
+
+/* theme style */
+
+
+.users-profil-bar .user-profil .images .theme i{ 
+    position: absolute;
+    right: 4vw; 
+}
+.users-profil-bar .user-profil .images .theme .bi-sun{ 
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out,opacity 0.3s ease-in-out;
+}
+.users-profil-bar .user-profil .images .theme .bi-sun.display-sun{ 
+    opacity: 1;
+    transform: rotate(180deg);
+}
+.users-profil-bar .user-profil .images .theme .bi-moon{ 
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out,opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+.users-profil-bar .user-profil .images .theme .bi-moon.display-moon{ 
+    transform: rotate(240deg);
+    opacity: 0;
+} 
+
+
+/* end theme */
+
+
+.users-profil-bar .user-profil .user-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.users-profil-bar .user-profil .user-name .user-id{
+    padding: 2px 0;
+    cursor: pointer;
+}
+.users-profil-bar .user-profil .user-name .user-id h2{
+    font-size: 18px;
+    padding: 2px 0;
+    color: #dfdddd;
+}
+.users-profil-bar .user-profil .user-name .user-id small{
+    font-size: 11px;
+    color: #ffffffa8;
+}
+.users-profil-bar .user-profil .user-name a .bi-arrow-right {
+    font-size: 19px;
+    color: #eeebebef;
+}
+
+
+.responsive-nav-lists{
+    display: block;
+    padding: 10px 3vw;
+}
+.responsive-nav-lists .nav-l{
+    display: flex;
+    column-gap: 1em;
+    padding: 0.5em 8px;
+    margin: 0.5em 0;
+    cursor: pointer;
+}
+.responsive-nav-lists .nav-l a{
+    color: #00011ac2;
+}
+.responsive-nav-lists .nav-l:hover,
+.responsive-nav-lists .nav-l:hover a{
+    color: #bd0094;
+}
+.responsive-nav-lists .nav-l:hover{
+    background: #eaebeb69;
+    border-radius: 5px;
+}
+
+
+
+.other-nav-bar-lists{
+    border-top: solid 1px #00030e18;
+}
+ 

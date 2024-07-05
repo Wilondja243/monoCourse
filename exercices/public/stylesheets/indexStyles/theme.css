@@ -1,0 +1,20 @@
+
+:root{
+    --white-color--:#ffffff;
+    --dark-color--:#040407;
+    --black-color--:#000000;
+    --darkblue-color--:#0d0e1a;
+}
+
+
+body.display-body-bg{
+    background: var(--black-color--);
+}
+.header-container.display-header-container-bg{
+    background: var(--darkblue-color--);
+    color: var(--white-color--);
+}
+.users-profil-bar.display-users-profil-bar{
+    background: #3a012d;
+    transition: background 0.3s ease-in-out;
+}

@@ -146,61 +146,35 @@ nav .nav-lists{
     font-weight: 400;
     color: #030308cb;
 }
-.search-content{
-    
-}
-.search-content .search{
-   display: flex;
-   column-gap: 0.5em;
-}
-.search-content .search .select-input{
-   display: flex;
-   justify-content: space-between;
-   column-gap: 0.5em;
-   border: 0.2px solid #03030813;
-   border-radius: 25px;
-   width: 35vw;
-}
-.search-content .search .select-input input[type="search"]{
-    padding: 10px 8px;
-    width: 28vw;
-    border-radius: 25px;
-    border: none;
-}
-.search-content .search .select-input select{
-    border: none;
-    padding: 10px 15px;
-    border-radius: 0 25px 25px 0;
-    background: var(--white-color--);
-}
-.search-content .search .select-input select option{
-    font-weight: 400;
-    font-size: 18px;
-    color: #030308e1;
-}
-.search-content .search input[type="submit"]{
-    padding: 10px 40px;
-    font-size: 17px;
-    font-weight: bold;
-    border-radius: 20px;
-    background: #e6038f;
-    border: none;
-    color: var(--white-color--);
-    cursor: pointer;
-}
+
 .start-btn{
-    margin: 2em 0;
-    display: none;
+    display: flex;
+    align-items: center;
+    column-gap: 2em;
 }
-.start-btn button{
+.start-btn .p-t{
+    display: flex;
+}
+.start-btn .p-t small{
+    font-size: 10px;
+    color: #020d3ad0;
+}
+.start-btn .p-t i{
+    font-size: 15px;
+    color: #f509e1;
+    padding: 0 0.8em;
+}
+.start-btn .started {
     border: none;
     font-weight: bold;
+    font-size: 18px;
     cursor: pointer;
-    padding: 10px 30px;
-    border-radius: 20px;
+    padding: 8px 30px;
+    border-radius: 30px;
     color: var(--white-color--);
     background:var(--rose-color--);
 }
+
 
 
 
@@ -311,7 +285,6 @@ nav .nav-lists{
 .thumbenail-image .images img{
     width: 26em;
     height: 30em;
-    position: relative;
 }
 
 
@@ -1044,7 +1017,7 @@ footer{
         width: 100%;text-align: center;
     }
     .thumb-desc h1{
-        font-size: 12vw;
+        font-size: 8vw;
     }
     .thumb-desc p{
         font-size: 13px;color: #030308b6;padding: 0 1em;
@@ -1052,34 +1025,21 @@ footer{
     .ex-class-maker .saw-about-students{
         right: -1em;
     }
-    
-    .search-content{   
-        margin: 0 0.5em;padding: 20px 0;border-radius: 10px;
-        box-shadow: 0 0 20px #03030813;
-        background: var(--white-color--);
-     }
-    .search-content .search{
-        justify-content: center; align-items: center;
-     }
-     .search-content .search .select-input{
-         width: 65vw;margin: 1em 0;
-     }
-     .search-content .search .select-input input[type="search"]{
-         padding: 10px 8px;width: 50vw;
-     }
-     .search-content .search input[type="submit"]{
-        padding: 5px 0;width: 5em;height: 2.3em;
-    }
+
     .start-btn{
-        display:block;
+        justify-content: center;margin: 3em 0;
     }
-
-
+    .start-btn .p-t small,.start-btn .p-t i{
+        display: none;
+    }
     .thumbenail-image{
-       margin: 1em 0.5em;
+       margin: 1em 0.5em;position: relative;
+    }
+    .thumbenail-image .images{
+        width: 26em;margin: auto;
     }
     .thumbenail-image .images img{
-        width: 100%;height: 100%;position: relative;
+        width: 28em;height: 30em;
     }
     .ex-class-maker .saw-about-advantage{
         left: 0.3em;
@@ -1122,9 +1082,6 @@ footer{
     .see-btns {
         display: none;
      }
-    .search-content{
-        display: none;
-    }
    
     .way-start-learn .simple-ways h1{
         font-size: 20px;
@@ -1137,6 +1094,12 @@ footer{
     }
     .way-start-learn .simples{background: var(--white-color--);box-shadow: 0 0 20px #00000010;padding: 5px 8px;border-radius: 8px;}
     @media (max-width:550px){
+        .thumbenail-image .images{
+            width: 80%;
+        }
+        .thumbenail-image .images img{
+            width: 100%;height: 100%;
+        }
         .simple-creations{
         display: block;align-items: center;width: 70vw;margin: auto;
        } 
