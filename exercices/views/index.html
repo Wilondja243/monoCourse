@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="../public/assets/icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../public/stylesheets/main.css">
     <script src="../public/javascript/script.js" defer></script> 
-    <script src="../public/javascript/jsStaticFiles/feed.js" defer></script>
-    <script src="../public/javascript/jsStaticFiles/instructor.js" async defer></script>
+    <script src="../public/javascript/databaseFiles/feed.js" defer></script>
+    <script src="../public/javascript/databaseFiles/instructor.js" async defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
                  </div>
                 <ul class="nav-lists">
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="">Courses</a></li>
+                    <li><a href="./platform/course.html">Courses</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Setting</a></li>  
                 </ul>
@@ -38,26 +38,12 @@
                             <h1>Professional Learing At Your Home</h1>
                             <p>Discover our extensive library of online courses covering various fields. Take courses at your own pace and earn recognized certifications.</p>
                             <div class="start-btn">
-                                <a href=""></a>
-                                <button>Get started for free</button>
+                                <p-t class="p-t"><small>Join the courses</small> <i class="bi bi-arrow-right"></i></p-t>
+                                <a href="./platform/course.html">
+                                <button type="button" class="started">Get started now</button>
                                 </a>
                             </div>
-                        </div>
-                        <div class="search-content">
-                            <div class="search">
-                                <div class="select-input">
-                                    <input type="search" name="" id="" placeholder="search course" autocomplete="off">
-                                    <select name="" id="">
-                                        <option value="#">Categories</option>
-                                        <option value="Programming">Programming</option>
-                                        <option value="obil">Mobil Network</option>
-                                        <option value="UI">UI design</option>
-                                        <option value="Marketing">Marketing</option>
-                                    </select>
-                                </div>
-                                <input type="submit" class="search-course" value="search">
-                            </div>
-                        </div>
+                        </div>         
                     </div>
                     <div class="thumbenail-image">
                         <div class="ex-class-maker">
@@ -318,8 +304,8 @@
 
     <!-- script -->
 
-    <script src="../public/javascript/jsStaticFiles/course.js"></script>
-    <script src="../public/javascript/jsStaticFiles/pop-category.js"></script>
+    <script src="../public/javascript/databaseFiles/home-course.js"></script>
+    <script src="../public/javascript/databaseFiles/pop-category.js"></script>
   
 </body>
 </html>
