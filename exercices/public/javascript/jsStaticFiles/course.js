@@ -131,7 +131,7 @@
         }
     }
 
-    function mainModal(){
+    function mainCourseModal(){
         const main_right_bar = document.querySelector('.main-right-bar');
         if(main_right_bar){
             main_right_bar.addEventListener('click',function(){
@@ -139,7 +139,7 @@
             })
         }
     }
-    function displayMainModal(){
+    function displayMainCourseModal(){
         const main_responsive = document.querySelector('.main-responsive-bar-container');
         if(main_responsive){
             main_responsive.addEventListener('click',function(event){
@@ -151,8 +151,8 @@
         }
     }
     
-    displayMainModal();
-    mainModal();
+    displayMainCourseModal();
+    mainCourseModal();
     displayModalCourse();
     courseBar();
 
